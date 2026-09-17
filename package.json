@@ -1,6 +1,6 @@
 {
   "name": "rsschool-landing-page",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,6 +11,10 @@
   "author": "AlenaVP",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.104.1",
     "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
   }
 }
