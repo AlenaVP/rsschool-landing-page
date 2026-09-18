@@ -6,3 +6,32 @@
   font-weight: 600;
   line-height: 1.5;
 }
+
+@mixin underline-hover($offset: 0) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: $offset;
+    height: 2px;
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform var(--transition);
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  &:focus-visible {
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+  }
+}
