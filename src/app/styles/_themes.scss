@@ -1,0 +1,16 @@
+:root {
+  --color-bg-page: #e1d4c9;
+  --color-bg-container: #665f55;
+  --color-text-primary: #403f3d;
+  --color-text-accent: #b0907a;
+  --color-text-inverse: #e1d4c9;
+  --color-border-primary: #c1b6ad;
+}
+
+:root[data-theme='dark'] {
+  --color-bg-page: #292826;
+  --color-text-primary: #e1d4c9;
+  --color-text-accent: #b0907a;
+  --color-text-inverse: #e1d4c9;
+  --color-border-primary: #665f55;
+}
