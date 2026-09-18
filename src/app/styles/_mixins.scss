@@ -1,0 +1,8 @@
+@use 'variables' as vars;
+
+@mixin action-text {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-action;
+  font-weight: 600;
+  line-height: 1.5;
+}
