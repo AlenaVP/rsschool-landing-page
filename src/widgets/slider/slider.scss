@@ -1,0 +1,82 @@
+@use 'app/styles/mixins' as mix;
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+  }
+
+  &__viewport {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border-inverse);
+    background: transparent;
+    color: var(--color-text-primary);
+    transition: background-color var(--transition);
+
+    &:hover {
+      background-color: var(--color-bg-container);
+
+      .slider__icon {
+        stroke: var(--color-text-inverse);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-text-primary);
+      outline-offset: 4px;
+    }
+
+    &--prev .slider__icon {
+      transform: scaleX(-1);
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--color-text-primary);
+    transition: all var(--transition);
+  }
+
+  &__dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__dot {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--color-border-primary);
+    transition:
+      background-color var(--transition),
+      width var(--transition);
+
+    &[aria-current='true'] {
+      background-color: var(--color-text-accent);
+    }
+  }
+}
