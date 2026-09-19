@@ -7,6 +7,13 @@
   line-height: 1.5;
 }
 
+@mixin heading-1 {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-h1;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
 @mixin heading-2 {
   font-family: vars.$font-family-base;
   font-size: vars.$font-size-h2;
