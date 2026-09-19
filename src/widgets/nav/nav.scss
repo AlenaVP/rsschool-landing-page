@@ -1,0 +1,18 @@
+@use 'app/styles/mixins' as mix;
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__list-item {
+    color: var(--color-text-primary);
+  }
+
+  &__list-link {
+    @include mix.action-text;
+    @include mix.underline-hover(-4px);
+  }
+}

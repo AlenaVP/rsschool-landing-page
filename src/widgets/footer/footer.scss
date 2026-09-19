@@ -1,0 +1,126 @@
+@use 'app/styles/mixins' as mix;
+
+/* footer */
+.footer {
+  padding-top: 100px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 100px;
+    max-width: 1360px;
+    border-radius: 40px;
+    background: var(--color-bg-container);
+  }
+
+  &__title {
+    @include mix.heading-2;
+    margin: 0;
+    color: var(--color-text-inverse);
+
+    .accent {
+      display: block;
+    }
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 530px;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials__icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-text-inverse);
+  transition: all 0.35s ease-out;
+}
+
+.socials__link {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid var(--color-text-inverse);
+  transition: all 0.35s ease-out;
+
+  &:hover {
+    background: var(--color-bg-page);
+    border-color: var(--color-bg-page);
+
+    .socials__icon {
+      stroke: var(--color-text-primary);
+    }
+  }
+}
+
+.contact-us {
+  width: 530px;
+  color: var(--color-text-inverse);
+}
+
+.contact-us__title {
+  @include mix.heading-3;
+  margin: 0 0 40px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  transition: all 0.35s ease-out;
+}
+
+.contact__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-text-inverse);
+  color: var(--color-text-inverse);
+}
+
+.contact:not(:last-child):after {
+  z-index: -1;
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  content: '';
+  background-color: var(--color-text-inverse);
+  transition: all 0.35s ease-out;
+}
+
+.contact:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.contact__link_address,
+.contact__link_tel {
+  font-weight: 600;
+  color: var(--color-text-inverse);
+}
+
+.contact__time {
+  letter-spacing: 0.015rem;
+}

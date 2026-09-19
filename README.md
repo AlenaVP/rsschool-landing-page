@@ -4,7 +4,7 @@ A responsive two-page coffee shop site built from a ready-made Figma template, a
 
 ## Demo
 
-- **Live:** *add link after the first deploy (branch `landing-page`)*
+- **Live:** https://coffee-house-avp.netlify.app/
 - **Figma (original assignment):** https://www.figma.com/design/yuc5s9NCc4jENkk5LdFfvX/Coffee-House-2026Q3
 
 ## About
