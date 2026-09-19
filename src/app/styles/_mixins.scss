@@ -33,6 +33,7 @@
   font-size: vars.$font-size-h2;
   font-weight: 600;
   line-height: 1.25;
+  letter-spacing: normal;
 }
 
 @mixin heading-3 {
@@ -40,6 +41,7 @@
   font-size: vars.$font-size-h3;
   font-weight: 600;
   line-height: 1.25;
+  letter-spacing: normal;
 }
 
 @mixin underline-hover($offset: 0) {

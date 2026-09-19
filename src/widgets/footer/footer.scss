@@ -1,17 +1,21 @@
 @use 'app/styles/mixins' as mix;
 
 /* footer */
-.footer__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  padding: 100px;
-  max-width: 1360px;
-  border-radius: 40px;
-  background: var(--color-bg-container);
+.footer {
+  padding-top: 100px;
 
-  .footer__title {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 100px;
+    max-width: 1360px;
+    border-radius: 40px;
+    background: var(--color-bg-container);
+  }
+
+  &__title {
     @include mix.heading-2;
     margin: 0;
     color: var(--color-text-inverse);
@@ -20,13 +24,13 @@
       display: block;
     }
   }
-}
 
-.footer__offer {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 530px;
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 530px;
+  }
 }
 
 .socials {
