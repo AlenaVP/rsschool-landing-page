@@ -7,6 +7,20 @@
   line-height: 1.5;
 }
 
+@mixin heading-2 {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-h2;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+@mixin heading-3 {
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-h3;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
 @mixin underline-hover($offset: 0) {
   position: relative;
 

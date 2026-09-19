@@ -48,3 +48,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.accent {
+  color: var(--color-text-accent);
+  font-style: italic;
+}
