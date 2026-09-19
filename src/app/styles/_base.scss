@@ -1,3 +1,5 @@
+@use 'app/styles/mixins' as mix;
+
 :root {
   --transition: 0.35s ease;
 }
@@ -52,4 +54,9 @@ a {
 .accent {
   color: var(--color-text-accent);
   font-style: italic;
+}
+
+.section-title {
+  @include mix.heading-2;
+  margin-bottom: 40px;
 }
