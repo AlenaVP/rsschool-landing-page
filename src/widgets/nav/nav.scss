@@ -1,0 +1,25 @@
+@use 'app/styles/variables' as vars;
+@use 'app/styles/mixins' as mix;
+
+.nav {
+  display: none;
+
+  @media (min-width: vars.$bp-desktop) {
+    display: flex;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__list-item {
+    color: var(--color-text-primary);
+  }
+
+  &__list-link {
+    @include mix.action-text;
+    @include mix.underline-hover(-4px);
+  }
+}

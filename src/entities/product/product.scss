@@ -1,0 +1,43 @@
+@use 'app/styles/variables' as vars;
+@use 'app/styles/mixins' as mix;
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid var(--color-border-primary);
+  border-radius: 40px;
+  max-width: 310px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    min-height: 196px;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: none;
+    border-radius: inherit;
+    background: var(--color-border-primary);
+  }
+
+  &__title {
+    @include mix.heading-3;
+  }
+
+  &__description {
+    @include mix.body-text;
+    color: var(--color-text-primary);
+    opacity: 0.72;
+  }
+
+  &__price {
+    @include mix.catalog-price;
+    color: var(--color-text-primary);
+    margin-top: auto;
+  }
+}

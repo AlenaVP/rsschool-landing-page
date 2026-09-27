@@ -1,0 +1,32 @@
+@use 'app/styles/mixins' as mix;
+
+.slide-card {
+  flex: 0 0 100%;
+  text-align: center;
+
+  &__image {
+    display: block;
+    max-height: 480px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__title {
+    @include mix.heading-3;
+    margin-top: 20px;
+    color: var(--color-text-primary);
+  }
+
+  &__description {
+    @include mix.body-text;
+    max-width: 480px;
+    margin: 16px auto;
+    color: var(--color-text-primary);
+  }
+
+  &__price {
+    @include mix.heading-3;
+    color: var(--color-text-primary);
+    margin: 16px auto;
+  }
+}
