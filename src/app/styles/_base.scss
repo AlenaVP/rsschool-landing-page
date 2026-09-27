@@ -76,8 +76,17 @@ section:not(:first-child) {
 
 .wrapper {
   margin: 0 auto;
-  padding: 0 40px;
-  max-width: vars.$bp-desktop;
+  padding: 0 16px;
+  max-width: vars.$bp-mobile;
+
+  @media (min-width: vars.$bp-tablet) {
+    padding: 0 40px;
+    max-width: vars.$bp-tablet;
+  }
+
+  @media (min-width: vars.$bp-desktop) {
+    max-width: vars.$bp-desktop;
+  }
 }
 
 .section-title {

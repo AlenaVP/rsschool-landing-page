@@ -1,3 +1,4 @@
+@use 'app/styles/variables' as vars;
 @use 'app/styles/mixins' as mix;
 
 .header {
@@ -7,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
 
   &__logo {
@@ -42,13 +44,30 @@
   &__cta {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
+
+    @media (min-width: vars.$bp-tablet) {
+      gap: 30px;
+    }
+
+    @media (min-width: vars.$bp-desktop) {
+      gap: 24px;
+    }
   }
 
   &__theme-switch {
     display: flex;
+    gap: 12px;
     border: 1px solid var(--color-border-primary);
     border-radius: 100px;
+
+    @media (min-width: vars.$bp-tablet) {
+      gap: 8px;
+    }
+
+    @media (min-width: vars.$bp-desktop) {
+      gap: 0;
+    }
   }
 
   &__switch-btn {
@@ -84,10 +103,29 @@
   &__coffee-menu {
     @include mix.action-text;
     @include mix.underline-hover(-1px);
-    display: flex;
+    display: none;
     align-items: center;
     gap: 8px;
     color: var(--color-text-primary);
     width: 72px;
+
+    @media (min-width: vars.$bp-desktop) {
+      display: inline-flex;
+    }
+  }
+
+  &__burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border-inverse);
+    border-radius: 50%;
+    color: var(--color-text-primary);
+
+    @media (min-width: vars.$bp-desktop) {
+      display: none;
+    }
   }
 }

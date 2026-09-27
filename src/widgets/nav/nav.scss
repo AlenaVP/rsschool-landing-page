@@ -1,6 +1,13 @@
+@use 'app/styles/variables' as vars;
 @use 'app/styles/mixins' as mix;
 
 .nav {
+  display: none;
+
+  @media (min-width: vars.$bp-desktop) {
+    display: flex;
+  }
+
   &__list {
     display: flex;
     justify-content: center;

@@ -1,3 +1,4 @@
+@use 'app/styles/variables' as vars;
 @use 'app/styles/mixins' as mix;
 
 /* footer */
@@ -6,19 +7,37 @@
 
   &__inner {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    gap: 40px;
     margin-bottom: 40px;
-    padding: 100px;
+    padding: 60px 16px;
     max-width: 1360px;
     border-radius: 40px;
     background: var(--color-bg-container);
+
+    @media (min-width: vars.$bp-tablet) {
+      gap: 100px;
+      padding: 100px 60px;
+    }
+
+    @media (min-width: vars.$bp-desktop) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+      padding: 100px;
+    }
   }
 
   &__title {
     @include mix.heading-2;
     margin: 0;
     color: var(--color-text-inverse);
+    font-size: 32px;
+
+    @media (min-width: vars.$bp-tablet) {
+      font-size: vars.$font-size-h2;
+    }
 
     .accent {
       display: block;
@@ -29,6 +48,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 100%;
     max-width: 530px;
   }
 }
@@ -66,7 +86,8 @@
 }
 
 .contact-us {
-  width: 530px;
+  width: 100%;
+  max-width: 530px;
   color: var(--color-text-inverse);
 }
 
@@ -78,7 +99,11 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
+
+  @media (min-width: vars.$bp-desktop) {
+    gap: 16px;
+  }
 }
 
 .contact {
