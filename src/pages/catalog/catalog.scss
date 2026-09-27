@@ -1,0 +1,122 @@
+@use 'app/styles/variables' as vars;
+@use 'app/styles/mixins' as mix;
+
+.catalog {
+  .section-title {
+    margin: auto;
+    text-align: center;
+    font-size: 32px;
+
+    @media (min-width: vars.$bp-tablet) {
+      font-size: vars.$font-size-h2;
+    }
+
+    @media (min-width: vars.$bp-desktop) {
+      max-width: 755px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-block: 40px;
+
+    @media (min-width: vars.$bp-desktop) {
+      gap: 16px;
+    }
+  }
+
+  &__tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 8px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border-primary);
+    background: transparent;
+    color: var(--color-text-primary);
+    @include mix.action-text;
+    transition:
+      background var(--transition),
+      color var(--transition),
+      border-color var(--transition);
+
+    &:hover,
+    &[aria-selected='true'] {
+      border-color: transparent;
+      background: var(--color-bg-container, var(--color-dark));
+      color: var(--color-text-inverse);
+    }
+
+    &[aria-selected='true'] {
+      cursor: default;
+    }
+  }
+
+  &__tab-icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-border-primary);
+    border-radius: 50%;
+  }
+
+  &__tab-img {
+    width: 16px;
+    object-fit: contain;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    justify-items: center;
+
+    @media (min-width: vars.$bp-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
+    }
+
+    @media (min-width: vars.$bp-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+
+    @media (max-width: calc(vars.$bp-desktop - 1px)) {
+      .product-card-item:nth-child(n + 5) {
+        display: none;
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media (min-width: vars.$bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--color-text-primary);
+    color: var(--color-text-primary);
+    transition: border-color var(--transition);
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--color-text-accent);
+    }
+  }
+}

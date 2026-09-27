@@ -44,6 +44,14 @@
   letter-spacing: normal;
 }
 
+@mixin catalog-price {
+  font-family: vars.$font-family-base;
+  font-size: 26px;
+  line-height: 0.75;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
 @mixin underline-hover($offset: 0) {
   position: relative;
 
