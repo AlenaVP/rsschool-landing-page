@@ -1,8 +1,8 @@
 import catalogTemplate from './catalog-template.html?raw';
 import './catalog.scss';
-import { createElementFromTemplate } from '../../shared/lib/dom';
-import { createProductCard } from '../../entities/product/product';
-import { PRODUCTS } from '../../entities/product/product.data';
+import { createElementFromTemplate } from '@/shared/lib/dom';
+import { createProductCard } from '@/entities/product/product';
+import { PRODUCTS } from '@/entities/product/product.model';
 
 const DEFAULT_CATEGORY = 'coffee';
 
